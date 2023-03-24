@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-app';
+  profile = {
+    name: '',
+    status: '',
+    avatar: ''
+  }
+  addProfile(newProfile: any){
+    this.profile.name = newProfile.name;
+    this.profile.status = newProfile.status;
+    this.profile.avatar = newProfile.avatar;
+  }
+  removeProfile(){
+    this.profile.name = '';
+    this.profile.status = '';
+    this.profile.avatar = '';
+  }
 }

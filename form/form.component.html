@@ -1,1 +1,13 @@
-<p>form works!</p>
+<div class="body">
+   <input type="text" placeholder="Name" 
+   [value]="nameInputValue"
+   (input) = 'onName($event)' #name>
+   <textarea type="text" placeholder="Status" 
+   [value]="statusInputValue"
+   (input) = 'onStatus($event)' #status></textarea>
+   <input type="text" placeholder="Avatar URL" (input) = 'onAvatar($event)' #avatar>
+   <button type="button"
+   [value]="avatarInputValue"
+   (click) = 'addNewProfile(name.value, status.value, avatar.value)'
+   >Add user</button>
+   </div>
